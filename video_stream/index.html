@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="webtorrent.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+</body>
+  <script type="text/javascript">
+  var client = new WebTorrent()
+
+  var torrentId = 'magnet:?xt=urn:btih:976674fc52bb8e61499e701033a5a4759b5f0d60'
+
+  client.add(torrentId, function (torrent) {
+    var file = torrent.files[0]
+    file.appendTo('body') // append the file to the DOM
+  })
+  </script>
+</html>
